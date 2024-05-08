@@ -42,9 +42,13 @@ if (redirectUrl.pathname === window.location.pathname) {
   Auth.handleSigninCallback().catch(console.error);
 } else {
   ReactDOM.render(
+    <>
+    <script crossOrigin="anonymous" src="*"></script>
     <React.StrictMode>
       <App />
-    </React.StrictMode>,
+    </React.StrictMode>
+    </>
+    ,
     document.getElementById("root")
   );
 }
